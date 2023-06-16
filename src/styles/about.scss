@@ -1,0 +1,44 @@
+@import 'colors';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,900&display=swap');
+
+.about {
+    color: black;
+    min-height: 65vh;
+    background-color: $second;
+    font-family: 'Roboto';
+    font-size: medium;
+    display: grid;
+    grid-template-rows: repeat(2 1fr);
+
+    >.define {
+        grid-row: 1 span/2;
+        margin-top: 150px;
+        margin-left: 25px;
+
+        >h1 {
+            font-size: xx-large;
+            font-weight: bolder;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        >p {
+            font-size: medium;
+            font-weight: 500;
+        }
+    }
+
+    >.pic {
+        grid-row: 1 span/2;
+        animation-name: updown;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 1s;
+    }
+
+    @keyframes updown {
+        to {
+            transform: translateY(-25px);
+        }
+    }
+}

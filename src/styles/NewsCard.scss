@@ -1,0 +1,15 @@
+@import 'colors';
+
+.newsCard{
+    min-height: 50vh;
+    display: grid;
+    grid-template-rows: repeat(2 1fr);
+
+    >.pic{
+        grid-row: 1 span/2;
+        margin: 25px;
+    }
+    >.info{
+        grid-row: 1 span/2;
+    }
+}

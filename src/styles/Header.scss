@@ -1,0 +1,55 @@
+@import 'colors';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,900&display=swap');
+
+nav {
+    width: 100%;
+    height: 75px;
+    padding: 10px;
+    display: flex;
+    font-family: 'Roboto';
+    justify-content: space-between;
+    position: sticky;
+    background-color: $second;
+    box-shadow: 0px 0px 4px 0px black;
+
+    >img {
+        margin-right: -160px;
+    }
+
+    >h1 {
+        margin-top: 4px;
+        color: black;
+        font-size: xx-large;
+        font-weight: bolder;
+
+        >sup {
+            font-size: xx-small;
+        }
+    }
+
+    >main {
+        width: 70%;
+        display: flex;
+        justify-content: flex-end;
+
+        >a {
+            margin: 15px 20px;
+
+            // &:active {
+            //     transform: scale(1.25);
+            //     background-color: $fourth;
+            //     color: $second;
+            // }
+
+            transition: all .5s;
+
+            &:hover {
+                transform: scale(1.25);
+                color: $fourth;
+            }
+
+
+
+        }
+    }
+}

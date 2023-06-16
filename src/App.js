@@ -1,42 +1,41 @@
-import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Home from './components/Home'
+import Coins from './components/Coins'
+import Exchanges from './components/Exchanges'
+import News from './components/News'
+import About from './components/About'
+import CoinDetails from './components/CoinDetails'
 
-function App() {
+
+import './styles/Home.scss'
+import './styles/Header.scss'
+import './styles/footer.scss'
+import './styles/about.scss'
+import './styles/coin.scss'
+import './styles/exchanges.scss'
+import './styles/NewsCard.scss'
+
+
+const App = () => {
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
-    </ChakraProvider>
-  );
+    <>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/coins' element={<Coins />} />
+          <Route path='/coins/:id' element={<CoinDetails />} />
+          <Route path='/exchanges' element={<Exchanges />} />
+          <Route path='/news' element={<News />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </>
+  )
 }
 
-export default App;
+export default App

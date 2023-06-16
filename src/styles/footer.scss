@@ -1,0 +1,37 @@
+@import 'colors';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,900&display=swap');
+
+
+.footer {
+    width: 100%;
+    min-height: 10vh;
+    background-color: $first;
+    color: black;
+    font-family: 'Roboto';
+    display: grid;
+    grid-template-rows: repeat(2 1fr);
+
+    >.line {
+        border-left: 3px solid black;
+        height: 20vh;
+        position: absolute;
+        left: 50%;
+        margin: 10px 0px;
+    }
+
+    >.row {
+        grid-row: 1/span2;
+        margin: 20px 0px 0px 40px;
+        text-align: center;
+        >ul {
+            margin-top: 10px;
+            list-style-type: none;
+        }
+
+        >h1 {
+            font-size: x-large;
+            font-weight: bolder;
+        }
+    }
+
+}
